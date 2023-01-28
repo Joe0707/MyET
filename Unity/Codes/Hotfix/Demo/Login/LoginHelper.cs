@@ -34,7 +34,7 @@ namespace ET
 
                 Log.Debug("登陆gate成功!");
 
-                Game.EventSystem.Publish(new EventType.LoginFinish() {ZoneScene = zoneScene});
+                Game.EventSystem.Publish(new EventType.LoginFinish() {ZoneScene = zoneScene}); 
             }
             catch (Exception e)
             {

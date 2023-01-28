@@ -33,7 +33,14 @@ namespace ET
             Game.Scene.AddComponent<NumericWatcherComponent>();
             
             Game.Scene.AddComponent<NetThreadComponent>();
-            
+
+            Computer computer = Game.Scene.AddChild<Computer>();
+            computer.AddComponent<PCCaseComponent>();
+            computer.AddComponent<MonitorsComponent>();
+            computer.AddComponent<MouseComponent>();
+            computer.AddComponent<KeyboardComponent>();
+
+            computer.Start();
             Game.Scene.AddComponent<NavmeshComponent, Func<string, byte[]>>(RecastFileReader.Read);
 
             switch (Game.Options.AppType)

@@ -7,6 +7,7 @@ namespace ET
     public class Unit: Entity, IAwake<int>
     {
         public int ConfigId; //配置表id
+        public UnitType UnityType { get; set; }
 
         [BsonIgnore]
         public UnitConfig Config => UnitConfigCategory.Instance.Get(this.ConfigId);
